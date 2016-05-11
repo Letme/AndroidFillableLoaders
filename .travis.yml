@@ -8,5 +8,24 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
 
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "Jk6MNbP6U1EW9QrtlkFmZRsqTYm28h+NvvQhx8MOvfGX0V/i7lp4k/Idq4XRqsJ5HCglhMEYWmST+qqauatPjXXtsua3ZZoNZn7pbAbNMHNLwFvo8rmoQJAQ2zJi+f3bStAz83CPzkBtLQFBZclZpb+bailHwTt6oKwpcRvaxrGX02NEOdtP0RnblRzszf+ugHAHNubAV639wnx1tWN738Vfs2fEu0teYVQbvXuSwWgqcVBA834EuYX4wA0gBjd7OO7nvjgLKDv9p5YFK8/nIT9VSGQN10hyeC3pFh4N+T1Q8ewd6rPrvnN92p5DG4aQemyaRtLfjl0DXRSRHwM8Xk5v00bV1RSpfrL5ytEm8SJB4Iqlg/2TKhx8QeQyO+P2sEmiq6vWOS0vOrKxBzjswPLgvK9WQA8JIvV4UdRY5FN2Jm7EkKkxlICiJ5U9BWVQQEBhhCKDAsQNl18x5Fv7GYTSL6ocQDACfoMkI0kVGmIpOJHFs7Kgn96ZcJ7LlmnC9B70Sg0AgzbqlpJw4nUPnAbq+uqtsjbReyyUi0jRIk8sZP0SnA97JzodhPEGphXUs+Ijaf5qInsFxIM6iIBPJFgjyaCH6saMIuX8b7s6NC2bx9XVVTWKYdjmPdwJnSu59w2MCAdDOkUjpcWzhRLj7s9Box7yG7D11HIiGD5deXA="
+
+addons:
+  coverity_scan:
+    project:
+      name: "Letme/AndroidFillableLoaders"
+      description: "FillableLoader library and sample app"
+    notification_email: ""
+    build_command_prepend: ""
+    build_command:   "./gradlew checkstyle build"
+    branch_pattern: master
+
 script:
   ./gradlew checkstyle build
+
+
