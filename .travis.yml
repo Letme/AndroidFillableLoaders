@@ -20,7 +20,7 @@ addons:
     project:
       name: "Letme/AndroidFillableLoaders"
       description: "FillableLoader library and sample app"
-    notification_email: ""
+    notification_email: "crt@the-mori.com"
     build_command_prepend: "./gradlew clean"
     build_command:   "./gradlew checkstyle build"
     branch_pattern: master
