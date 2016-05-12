@@ -21,7 +21,7 @@ addons:
       name: "Letme/AndroidFillableLoaders"
       description: "FillableLoader library and sample app"
     notification_email: ""
-    build_command_prepend: ""
+    build_command_prepend: "./gradlew clean"
     build_command:   "./gradlew checkstyle build"
     branch_pattern: master
 
